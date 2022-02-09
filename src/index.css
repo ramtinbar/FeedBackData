@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+@font-face {
+	font-family: "yekan";
+	src: url(fonts/Yekan.woff) format("woff");
+	font-weight: normal;
+	font-style: normal
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +14,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "yekan",'Poppins', sans-serif;
   background-color: #202142;
   color: #fff;
   line-height: 1.6;
+  direction: rtl;
+  text-align: right;
 }
 
 ul {
@@ -128,14 +137,14 @@ input:focus {
 .num-display {
   position: absolute;
   top: -10px;
-  left: -10px;
+  right: -10px;
 }
 
 .close,
 .edit {
   position: absolute;
   top: 10px;
-  right: 20px;
+  left: 20px;
   cursor: pointer;
   background: none;
   border: none;

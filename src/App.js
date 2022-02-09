@@ -10,6 +10,7 @@ import FeedBackForm from "./components/FeedBackForm"
 import AboutPage from "./pages/AboutPage"
 import AboutIconLink from "./components/AboutIconLink"
 import Post from "./components/Post"
+import { FeedbackProvider } from "./Context/FeedBackContext"
 
 function App(){
     const [feedback , setFeedback] = useState(FeedbackData)
@@ -24,8 +25,9 @@ function App(){
         }
     }
     return(
+        <FeedbackProvider>
         <Router>
-        <Header text={'Feedback UI '}/>
+        <Header text={'نظرتو بهم بگو !'}/>
         <div className="container">
            <Routes>
             <Route exact path="/" element ={
@@ -47,6 +49,7 @@ function App(){
        <AboutIconLink></AboutIconLink>
         </div>
         </Router>
+        </FeedbackProvider>
        
        
     )

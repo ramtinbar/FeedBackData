@@ -13,7 +13,7 @@ function FeedBackForm({handleAdd}) {
             setBtnDisabled (true)
             setMessage(null)
         }else if(text !=='' && text.trim().length <= 10 ){
-            setMessage('Text is too short')
+            setMessage('خیلی کم زدی')
             setBtnDisabled (true)
         }else{
             setMessage(null)
@@ -35,11 +35,11 @@ function FeedBackForm({handleAdd}) {
     }
   return (<Card>
       <form onSubmit={handleSubmit}>
-          <h2>Sorry for doing another practice ! rate me </h2>
+          <h2>ببخشید که یه تمرین دیگه انجام دادم... </h2>
          <RatingSelect select = {(rating) => setRating(rating) } />
           <div className="input-group">
-              <input onChange={handletextchange} type="text" value={text} placeholder="write a review" />
-              <Button type="submit" isDisabled ={btnDisabled}>Send</Button>
+              <input onChange={handletextchange} type="text" value={text} placeholder="نظرتو بهم بگو" />
+              <Button type="submit" isDisabled ={btnDisabled}>ارسال</Button>
           </div>
           {message && <div className="message">{message}</div>}
       </form>

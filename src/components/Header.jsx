@@ -17,7 +17,7 @@ function Header({text,bgcolor,textcolor}) {
 }
 
 Header.defaultProps = {
-    text : 'FeedBACK UI',
+    text : 'نظرتو بهم بگو !',
     bgcolor: 'rgba(0,0,0,0.4)',
     textcolor: '#ff6a95'
 }
